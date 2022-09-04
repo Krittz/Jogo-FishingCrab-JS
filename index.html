@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Fishing Crab</title>
+  </head>
+  <body onresize="ajustaTamanhoPalcoJogo()">
+    <div class="gameOver">
+      <img src="imagens/crab.png" alt="Crab draw" id="homeCrab" />
+      <select name="nivel" id="nivel">
+        <option value="">Choose difficulty</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <h1>Fishing Crab</h1>
+      <button onclick="playGame()" id="playGame">Play</button>
+    </div>
+
+    <script>
+      document.querySelector('#cronometro').innerHTML = tempo
+
+      var makeCrab = posicaoRandomica()
+      setInterval(function () {
+        posicaoRandomica()
+      }, 1000)
+    </script>
+    <script
+      src="https://kit.fontawesome.com/2bab216555.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
